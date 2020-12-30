@@ -38,7 +38,7 @@ cat /var/jenkins_home/secrets/initialAdminPassword
 
 ## Customize Jenkins
 
-* _Install suggested plugins_ or _select plugins to install_
+* Install suggested plugins _or_ select plugins to install
 * Create First Admin User
 * Create a job
 * Set up a distributed build
