@@ -17,14 +17,31 @@ Run Jenkins and install dependencies.
 ```bash
 make run
 ```
-> Access `http://localhost:8080/` in your browser and enter the administrator password. The password is output in the terminal log.
+> Access `http://localhost:8080/` in your browser and enter the administrator password.
+
+But, where's my password?
+
+```bash
+docker container ls
+
+# Copy the CONTAINER ID
+```
+
+Access the docker container
+
+```bash
+docker exec -it <CONTAINER ID> /bin/sh; exit
+cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+> Enter the initial administrator password and continue to customize Jenkins.
 
 ## Customize Jenkins
 
 * _Install suggested plugins_ or _select plugins to install_
 * Create First Admin User
-* Create a new build
-* Run the build
+* Create a job
+* Set up a distributed build
 
 ## License
 
